@@ -1,0 +1,79 @@
+﻿@model Asm1.Models.TaiKhoan
+@{
+    ViewData["Title"] = "Thông Tin Tài Khoản";
+}
+<style>
+    body{
+        margin-top:100px;
+    }
+    a{
+        text-decoration:none;
+        color:black;
+    }
+    a:hover{
+        color:black;
+        text-decoration:none;
+    }
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div>
+                <a asp-action="Index" asp-controller="Home">Trang chủ |</a>
+                <a> Thông tin tài khoản</a>
+            </div>
+            <h2 class="text-center">Thông Tin Tài Khoản</h2>
+            <div class="col-md-4 text-center">
+                
+                    <div class="w-100 " >
+                    <img src="@Model.HinhAnh" width="50%" height="50%" /style ="border-radius:50%">
+                    </div>
+                <br />
+                <a>Đổi mật khẩu</a><br />
+                <a asp-action="Logout" asp-controller="Home">Đăng xuất</a>
+            </div>
+            <div class="col-md-8">
+                <form asp-action="TaiKhoan" method="post">
+                    <div class="form-group">
+                        <label for="TenND">Tên Người Dùng</label>
+                        <input type="text" class="form-control" id="TenND" name="TenND" value="@Model.TenND" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="MatKhau">Mật Khẩu</label>
+                        <input type="password" class="form-control" id="MatKhau" name="MatKhau" value="@Model.MatKhau" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Diachi">Địa Chỉ</label>
+                        <input type="text" class="form-control" id="Diachi" name="Diachi" value="@Model.Diachi" />
+                    </div>
+                    <div class="form-group">
+                        <label for="SDT">Số Điện Thoại</label>
+                        <input type="text" class="form-control" id="SDT" name="SDT" value="@Model.SDT" />
+                    </div>
+                    <div class="form-group">
+                        <label for="GioiTinh">Giới Tính</label>
+                        <select class="form-control" id="GioiTinh" name="GioiTinh">
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cập Nhật</button>
+                </form>
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success">@ViewBag.Message</div>
+                }
+            </div>
+        </div>
+
+    </div>
+</body>
+
