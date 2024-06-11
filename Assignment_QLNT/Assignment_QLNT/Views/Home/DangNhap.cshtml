@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+<link rel="stylesheet" href="~/css/DangNhap.css" asp-append-version="true" />
+<style>
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form asp-action="DangNhap" method="post">
+                <h2>Đăng nhập</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" id="username" required name="username">
+                    <label for="">Tài khoản</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" required name="password">
+                    <label for="">Mật khẩu</label>
+                </div>
+                <div class="forget">
+                    <label for=""><input type="checkbox" name="rememberMe">Ghi nhớ đăng nhập <a href="#">Quên mật khẩu?</a></label>
+                </div>
+                <button class="btn-login">Đăng nhập</button>
+                <div class="register">
+                    <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+                </div>
+            </form>
+            <p id="errorMessage" class="hide">@ViewBag.ErrorMessage</p>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

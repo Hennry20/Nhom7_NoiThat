@@ -6047,11 +6047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT_Polyechnic\\C Sharp 5\\Nhom7_SD18301_ASM\\Assignment_QLNT\\Assignment_QLNT\\Assignment_QLNT.csproj",
+      "projectUniqueName": "D:\\FPT_Polyechnic\\C Sharp 5\\Assignment_Nhom7\\Assignment_QLNT\\Assignment_QLNT\\Assignment_QLNT.csproj",
       "projectName": "Assignment_QLNT",
-      "projectPath": "D:\\FPT_Polyechnic\\C Sharp 5\\Nhom7_SD18301_ASM\\Assignment_QLNT\\Assignment_QLNT\\Assignment_QLNT.csproj",
+      "projectPath": "D:\\FPT_Polyechnic\\C Sharp 5\\Assignment_Nhom7\\Assignment_QLNT\\Assignment_QLNT\\Assignment_QLNT.csproj",
       "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT_Polyechnic\\C Sharp 5\\Nhom7_SD18301_ASM\\Assignment_QLNT\\Assignment_QLNT\\obj\\",
+      "outputPath": "D:\\FPT_Polyechnic\\C Sharp 5\\Assignment_Nhom7\\Assignment_QLNT\\Assignment_QLNT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\OS\\AppData\\Roaming\\NuGet\\NuGet.Config",

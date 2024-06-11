@@ -1,0 +1,52 @@
+﻿@model SanPham
+@{
+    ViewData["Title"] = "Chi Tiết";
+}
+<style>
+    body {
+        margin-top: 75px;
+    }
+</style>
+
+<div class="container">
+    <div class="mt-4">
+        <a asp-controller="Home" asp-action="Index" style="text-decoration: none; color:black; font-weight:bold; font-size: 20px" asp-action="Index" asp-controller="Home">Trang chủ |</a>
+        <a style="text-decoration: none; color:black; font-weight:bold; font-size: 20px"> Danh mục sản phẩm |</a>
+        <a style="text-decoration: none; color:black; font-weight:bold; font-size: 20px" asp-action="Ban" asp-controller="Home" asp-route-id="@Model.DanhMuc.Id">
+            @Model.DanhMuc.TenDanhMuc
+        </a>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+           <img src="@Model.HinhAnh" class="w-100 h-75" alt="" />
+        </div>
+
+        <div class="col-md-6">
+            <div style="font-size: 40px; font-weight: bold;">@Model.Name</div>
+            <hr/>
+            <div class="text-danger font-weight-bold;" style="font-size: 20px;">@Model.Price.ToString("N0") VNĐ</div><br />
+            <div class="font-weight-bolder mb-3 fs-6">Doanh mục: @Model.DanhMuc.TenDanhMuc</div>
+            <div class="font-weight-bolder mb-3 fs-6">Vật liệu:  @Model.VatLieu</div>
+            <div class="font-weight-bolder mb-3 fs-6">Kích thước: D @Model.KichThuoc</div>
+            <div class="font-weight-bolder mb-3 fs-6">Mô tả:</div>
+            <p>@Model.MoTa</p>
+            <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                <button type="button" class="btn bi bi-dash btn-outline-dark"></button>
+                <div style="width: 50px; border: 1px solid black; text-align: center; padding-top: 5px;">1</div>
+                <button type="button" class="btn bi bi-plus btn-outline-dark"></button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-dark mt-4" style="border-radius:0px; font-size:16px;">MUA NGAY</button>
+                <button type="button" class="btn btn-light mt-4 ms-2" style="border-radius:0px; font-size:16px;">THÊM VÀO GIỎ</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TKhQ7rPmGfs?si=-hCLOaTTi0Y6H7Bn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>

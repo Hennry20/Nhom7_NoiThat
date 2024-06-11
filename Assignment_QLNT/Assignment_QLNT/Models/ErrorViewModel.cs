@@ -1,6 +1,6 @@
 using System;
 
-namespace Assignment_QLNT.Models
+namespace Asm1.Models
 {
     public class ErrorViewModel
     {
